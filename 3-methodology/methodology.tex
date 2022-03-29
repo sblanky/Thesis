@@ -8,11 +8,55 @@ Methodology chapter.
 \subsection{Activation}
 
 \section{Analytical Techniques}
-\subsection{Thermal Gravimetric Analysis}
+
+\subsection{Thermogravimetric Analysis}
+Thermogravimetric Analysis (TGA) measures the change in mass of a sample as temperature is increased under controlled atmosphere.\cite{coats1963thermogravimetric} TGA was used in this study primarily to determine the ash content of samples.
+
+Thermogravimetric analysis was performed using a TA Q500 Thermogravimetric Analyser. All samples were analysed using a platinum pan and in the presence of air. The parameters for all experiments were: Ramp 10 $\rm ^{\circ}C\ min^{-1}$ from 20-1000 $\rm ^{\circ}C$ with an isotherm for 10 minutes at 1000 $\rm ^{\circ}C$, gas flow: 60 $\rm mL\ min^{-1}$.
+
 \subsection{Elemental Microanalysis}
 \subsection{Powder X-ray Diffraction}
-\subsection{Electron Microscopy}
-\subsection{Porosimetry}
-\subsection{Gravimetric gas uptake}
+\subsection{X-ray Photoelectron Spectroscopy}
 
-\section*{References}
+X-ray photoelectron spectra are a result of irradiating a sample with an X-ray beam. This results in the ejection of electrons from low energy atomic orbitals according to the photoelectric effect,\cite{richardson1912liii} which are then collected and detected by the apparatus. This technique can then elucidate the elements present in the material from the kinetic energy of ejected electrons, as well as the relative quantity of said elements from the number of electrons ejected at each binding energy. The binding energy, $E_B$ is calculated according to the bellow equation;
+
+\begin{equation}
+    E_B = h\nu - \Phi - E_K
+\end{equation}
+
+where $h\nu$is the photon energy, $\Phi$ is the sample’s work function, and $E_K$ is the kinetic energy of the photoelectron. Additionally the chemical and electronic state of these elements can be determined from the ‘shifting’ of an element’s characteristic binding energies.\cite{moulder1995handbook}
+
+Samples were prepared from selected hydrochars and self-activated carbons by performing a TGA in air to burn off all carbonaceous material. The remaining inorganic matter was then analysed using the Kratos AXIS ULTRA with a mono-chromated Al $\rm k\alpha$ X-ray source (1486.6 eV) operated at 10 mA emission current and 12 kV anode potential (120 W). Spectra were acquired with the Kratos VISION II software. A charge neutralizer filament was used to prevent surface charging. Hybrid–slot mode was used measuring a
+sample area of approximately 300 x 700 $\rm \mu m$. The analysis chamber pressure was better than $\rm \num{5e-9}\ mbar$. Three areas per sample were analysed. A wide scan at low resolution (Binding energy range 1400 eV to -5 eV, with pass energy 80 eV, step 0.5 eV, sweep time 20 minutes) was used to estimate the total atomic \% of the detected elements. High resolution spectra at pass energy 20 eV, step of 0.1 eV, and sweep times of 10 minutes each were also acquired for photoelectron peaks from the detected elements and these were used to model the chemical composition. The spectra were charge corrected to the C 1s peak set to 285 eV. Casaxps (version 2.3.19 PR1.0) software was used for quantification and spectral modelling.
+
+\subsection{Inductively Coupled Plasma - Optical Emission Spectrometry}
+
+ICP-OES is an elemental quantification technique which uses inductively coupled plasma to separate and excite elements within an aqueous or organic sample. The excited elemental ions then emit characteristic radiation at optical wavelengths. The user selects which wavelengths (i.e. which elements) to measure, and the intensities of these are compared with a calibration curve to yield elemental concentrations.\cite{Hinners1988interlaboratory}
+
+Samples were prepared by dry-ashing in an alumina crucible at 600 $^{\circ}C$ for at least 16 h, the ash was then digested in an aqueous solution of 10\% each high purity \ce{HNO3} and \ce{HCl} (Aristar grade). The mixture was then sonicated for several hours, and digestion was completed via microwave, before being centrifuged at 4000 rpm for 99 min. Finally the digestate was filtered through syringe filters to remove any remaining sediment. References and blanks were prepared from the same stock digestion solution to ensure consistency. Standards were made from a 28-element standard (100 mg L-1, 2\% \ce{HNO3} matrix from Fisher) at concentrations of 0.1, 1, 10, 50, and 100 $\rm mg\ L^{-1}$. Measurements were made using a Perkin-Elmer Optima 2000 Spectrometer, using argon plasma.
+
+\subsection{Electron Microscopy}
+% needs work
+\paragraph{Scanning Electron Microscopy (SEM)} uses a beam of focused electrons in order to image solid materials. As the electrons interact with the material, electrons and electromagnetic radiation are emitted via various mechanisms. Secondary electrons (SE) are a result of the ejection of electrons from atoms near the sample surface, and secondary electron images (SEI) provide high resolution images of surface morphology and texture.\cite{Goldstein2017Scanning} 
+
+\paragraph{Backscatter electrons (BSE)} are electrons deflected by nuclear electrostatic charge – degree of deflection increases with nuclear charge. Though this results in much lower resolution images, backscatter electron detection (BED) images the material according to atomic weight, with heavier elements showing up as bright spots. This technique does not identify elements, but can be used to map heavier elements interspersed within a low atomic mass material.\cite{Goldstein2017Scanning}
+
+\paragraph{Tunneling Electron Microscopy (TEM)}
+
+\paragraph{Electron-Dispersive X-ray Analysis (EDX)}
+bla
+
+
+\par SEM images were taken on a JEOL 7100F FEG-SEM with detector set at a working distance of 10.00 mm. SE images were captured with an electron accelerating voltage of 1.00 or 2.00 kV, but this was increased to 15.00 kV for BSE.
+
+\subsection{Porosimetry}
+
+\subsection{Gravimetric \ce{CO2} uptake}
+The \ce{CO2} uptake of turbostratic carbon samples was determined via gravimetric analysis. This begins with the degassing of the samples under vacuum followed by precise measurement of the weight of the sample with increasing \ce{CO2} pressure. This yields a \ce{CO2} uptake isotherm, from which molar uptake can be read at pertinent pressures.
+
+Measurements were taken at 25 or 18 $^{\circ}C$, up to 40 or 20 bar, on Xemis or IGA analysers from Hiden Isochema. 
+
+\section{Computational}
+
+\bibliographystyle{rsc}
+\bibliography{bibliography/bib}

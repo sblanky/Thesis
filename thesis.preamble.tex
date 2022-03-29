@@ -18,9 +18,14 @@
      urlcolor=blue,
 }
 % \usepackage[colorlinks=true]{hyperref}
-\usepackage{natbib}
-\usepackage{apalike}
+\usepackage[sectionbib, super, sort&compress, comma]{natbib}
+\usepackage{chapterbib}
+\renewcommand{\bibname}{References}
 
+%\usepackage{apalike}
+
+% SI units, scientific notation
+\usepackage{siunitx}
      
 \usepackage{tabularx}
 \usepackage{booktabs}
@@ -68,6 +73,8 @@ breaklines=true,
 }
 \usepackage{caption}
 
+% number subsubsections
+\setcounter{secnumdepth}{3}
 
 % for table of contents to show Chapter
 \usepackage{tocloft,calc}
