@@ -18,9 +18,28 @@
      urlcolor=blue,
 }
 % \usepackage[colorlinks=true]{hyperref}
+
+%fonts; currently look weird with math.
+%\usepackage[sfdefault]{roboto}
+%\usepackage[T1]{fontenc}
+
+%Per chapter appendix setup
+\newcommand\appnums{% 
+    \setcounter{figure}{0}
+    \setcounter{table}{0}
+    %\renewcommand\thefigure{\appendixname~\Alph{section}}}
+    \renewcommand\thefigure{\thechapter.\Alph{figure}}
+    \renewcommand\thetable{\thechapter.\Alph{table}}
+    }
+    
+%reference setup
 \usepackage[sectionbib, super, sort&compress, comma]{natbib}
 \usepackage{chapterbib}
+\setlength{\bibsep}{0.0pt}
+
 \renewcommand{\bibname}{References}
+\makeatletter 
+\renewcommand\@biblabel[1]{#1.$\>\>$} 
 
 %\usepackage{apalike}
 
