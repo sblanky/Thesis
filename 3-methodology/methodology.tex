@@ -166,7 +166,7 @@ In practice, the equilibrium density profile is built up by minimising the grand
 The latter term defines the gas properties via the ideal gas equations according to the potential acting on the molecule $V(r)$, while $F[\rho(r)]$ is the Helmholtz free energy of the gas at equilibrium density at point $r$. $F[\rho(r)]$ is defined composed of repulsive (hard sphere) and attractive interactions between gas molecules. This treatment results in the local density approximation, which assumes that a local part of an inhomegeneous system has the same free energy density as a bulk homogeneous system of the same density. The inaccuracy of this treatment has led to further development of the theory via non-localised methods (NLDFT),  \citep{tarazona1987phase, lastoskie1993pore, landers2013density} 
 as well as a corrugated pore model to account for energetic heterogeneity, as developed by Jagiello et al.\citep{Jagiello20132D}
 
-Regardless of the method, the computational generation of an isotherm is repeated across a range of pore widths to generate a library of isotherms for a specific adsorbate-adsorbent system known as the kernel, $N\left(\frac{P}{P_0}, \, W\right)$. The general adsorption integral equation (\ref{GAI}) is then used to correlate the experimental isotherm, $N\left(\frac{P}{P_0}\right)$  with the kernel, resulting in the pore size distribution as a function of pore width, $f(W)$.\citep{Thommes2015Physisorption}
+Regardless of the method, the computational generation of an isotherm is repeated across a range of pore widths to generate a library of isotherms for a specific adsorbate-adsorbent system known as the kernel, $N\left(\frac{P}{P_0}, \, W\right)$. The general adsorption integral equation (equation \ref{eq:GAI}) is then used to correlate the experimental isotherm, $N\left(\frac{P}{P_0}\right)$  with the kernel, resulting in the pore size distribution as a function of pore width, $f(W)$.\citep{Thommes2015Physisorption}
 
 \begin{equation} \label{eq:GAI}
     N\left(\frac{P}{P_0}\right) = \int_{W_{min}}^{W_{max}} N\left(\frac{P}{P_0}, \, W \right) f(W) \, dW
@@ -177,7 +177,7 @@ This data can be displayed in terms of differential or cumulative pore volume an
 \subsection{\texorpdfstring{Gravimetric \ce{CO2} uptake}{Gravimetric CO2 uptake}}
 The \ce{CO2} uptake of turbostratic carbon samples was determined via gravimetric analysis. This begins with the degassing of the samples under vacuum followed by precise measurement of the weight of the sample with increasing \ce{CO2} pressure. This yields a \ce{CO2} uptake isotherm, from which molar uptake can be read at pertinent pressures.
 
-Measurements were taken at 25 or 18 $\rm ^{\circ}C$, up to 40 or 20 bar, on Xemis or IGA analysers from Hiden Isochema. 
+Measurements were taken at either 25 or 18 $\rm ^{\circ}C$ and up to 40 or 20 bar, on Xemis or IGA analysers respectively from Hiden Isochema. 
 
 \section{Computational}
 
