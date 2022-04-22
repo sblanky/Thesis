@@ -6,6 +6,8 @@
 
 \textbf{Contribution of the author}: The author designed and performed the literature review and wrote the manuscript.
 
+\clearpage
+%\BackupCounterGroup[backup-id=pub1]{pagebackup}
 \newpage
 
 \setlength{\originalVOffset}{\voffset}   
@@ -14,10 +16,17 @@
 \setlength{\voffset}{0cm}
 \setlength{\hoffset}{0cm}
 % too big for overleaf, try compilation later.
-\includepdf[pages=-]{publication_01}
+\includepdf[
+    pagecommand={
+    \setcounter{page}{\theopagenum + 1}
+    \thispagestyle{empty}
+    },
+    pages=-]{1-introduction/publication_01.pdf}
 \setlength{\voffset}{\originalVOffset}
 \setlength{\hoffset}{\originalHOffset}
+\clearpage
 
-%\setcounter{page}{\numexpr\value{savepage}+1}
+\clearpage
+%\RestoreBackupCounterGroup[backup-id=pub1]{pagebackup}
 
 \section{}
