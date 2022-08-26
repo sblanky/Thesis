@@ -25,35 +25,23 @@
 \include{thesis.preamble}
 \setlength{\parskip}{1em}
 
-
-% define all abbreviations used in the thesis
-\newacronym{vr}{VR}{Virtual Reality}
-\newacronym{ar}{AR}{Augmented Reality}
-\newacronym{hvar}{HVAR}{Hybrid Virtual and Augmented Reality}
-
 \makenoidxglossaries
+\include{thesis.gloss}
 
-% define research questions so that the phrasing of words are consistent.
-\newcommand{\rqone}{First research question?}
-\newcommand{\rqtwo}{Second research question?}
-\newcommand{\rqthree}{Third research question?}
     
 \begin{document}
 \symbolfootnote
-%\DeclareBackupCountersGroupName{pagebackup}
-%\AssignBackupCounters[name=pagebackup]{page}
 
 \newcounter{opagenum}
-\setcounter{opagenum}{\thepage}
 
-\title{Turbostratic carbons from \ce{CO2} capture: Novel synthetic methods, and development of improved experimental and computational techniques for understanding the relationship between porosity \ce{CO2} capacity}
+\title{Turbostratic carbons for \ce{CO2} capture: Novel synthetic methods, and development of improved experimental and computational techniques for understanding the relationship between porosity and \ce{CO2} capacity}
 
 \makeatletter
 \let\inserttitle\@title
 \makeatother
 
 \author{L. Scott Blankenship}
-\submitdate{July 2022}
+\submitdate{September 2022}
 \degree{Doctor of Philosophy}
 \studentid{4343286}
 \supervisor{\\Professor Robert Mokaya\\Dr Begum Tokay}
@@ -66,7 +54,9 @@
 \input{0-abstract/abstract}
 \input{0-statutory_declaration/statutory_declaration}
 \input{0-acknowledgements/acknowledgements}
+\input{0-glossary/glossary}
 \input{0-publications/publications}
+\input{0-notes/0-notes.tex}
 
 \newpage
 \tableofcontents
@@ -77,12 +67,10 @@
 
 \mainpagestyle
 
-% not working yet
-%\setcounter{savepage}{\value{page}}
 \pagenumbering{arabic}
 
 \include{1-introduction/introduction}
-\include{2-motivation/motivation}
+%\include{2-motivation/motivation}
 \include{3-methodology/methodology}
 %\include{4-syntheses/000-syntheses}
 \include{4-cbs/4-cbs}
@@ -90,16 +78,5 @@
 \include{5-dual_isotherm/dual_isotherm}
 \include{6-pyPUC/pyPUC}
 \include{7-conclusion/conclusion}
-
-
-%\newpage
-%\frontpagestyle
-%\addcontentsline{toc}{chapter}{Bibliography}
-%\bibliographystyle{apalike}
-%\renewcommand\bibname{Bibliography}
-%\bibliography{bibliography/bibliography}
-
-\input{appendices/appendix}
-
 
 \end{document}

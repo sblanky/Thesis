@@ -18,35 +18,84 @@
      urlcolor=blue,
 }
 % \usepackage[colorlinks=true]{hyperref}
+\usepackage{cprotect}
 
-%\usepackage{xassoccnt}
-
+\usepackage[]{inputenc}
+\newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
+\usepackage[english]{babel}
+\usepackage[autostyle, english=british]{csquotes}
+\MakeOuterQuote{"}
 %fonts; currently look weird with math.
 %\usepackage[sfdefault]{roboto}
-%\usepackage[T1]{fontenc}
-
+\usepackage[LGR,T1]{fontenc}
 %Per chapter appendix setup
-\newcommand\appnums{% 
+\usepackage{appendix}
+\usepackage{chngcntr}
+\usepackage{etoolbox}
+
+%directory tree
+\usepackage{forest}
+%folder colors
+\definecolor{folderbg}{RGB}{124,166,198}
+\definecolor{folderborder}{RGB}{110,144,169}
+%folder definitions
+\def\Size{4pt}
+\tikzset{
+      folder/.pic={
+        \filldraw[draw=folderborder,top color=folderbg!50,bottom color=folderbg]
+          (-1.05*\Size,0.2\Size+5pt) rectangle ++(.75*\Size,-0.2\Size-5pt);  
+        \filldraw[draw=folderborder,top color=folderbg!50,bottom color=folderbg]
+          (-1.15*\Size,-\Size) rectangle (1.15*\Size,\Size);
+      }
+    }
+
+\usepackage{pythonhighlight}
+\usepackage{xcolor,colortbl}
+
+% Start of subappendices environment
+\AtBeginEnvironment{subappendices}{%
+    \newpage
+    \section*{Appendices}
+    \addcontentsline{toc}{section}{Appendices}
+\makeatother
+
+    %\sectionmark{Appendices}
     \setcounter{figure}{0}
     \setcounter{table}{0}
-    %\renewcommand\thefigure{\appendixname~\Alph{section}}}
     \renewcommand\thefigure{\thechapter.A\arabic{figure}}
     \renewcommand\thetable{\thechapter.A\arabic{table}}
-    }
+}
+
+% End of subappendices environment
+\AtEndEnvironment{subappendices}{%
+    \setcounter{figure}{0}
+    \setcounter{table}{0}
+    \renewcommand\thefigure{\thechapter.\arabic{figure}}
+    \renewcommand\thetable{\thechapter.\arabic{table}}
+}
     
 %reference setup
 \usepackage[sectionbib, super, sort&compress, comma]{natbib}
 \usepackage{chapterbib}
 \setlength{\bibsep}{0.0pt}
 
-\renewcommand{\bibname}{References}
 \makeatletter 
 \renewcommand\@biblabel[1]{#1.$\>\>$} 
 
+\usepackage[nottoc]{tocbibind} %should fix references indexing
+\settocbibname{References}
+
 %\usepackage{apalike}
 
+%might fix citation overhang on p38
+%\usepackage{microtype}
 % SI units, scientific notation
 \usepackage{siunitx}
+\DeclareSIUnit\angstrom{\text{\AA}}
+\DeclareSIUnit\bar{bar}
+\DeclareSIUnit\wtpercent{wt.\%}
+\DeclareSIUnit\volpercent{vol.\%}
+\sisetup{separate-uncertainty=true}
      
 \usepackage{tabularx}
 \usepackage{booktabs}
@@ -55,11 +104,11 @@
 
 % remove [demo] to actually display pdf. 
 % Currently just displays empty pages
-\usepackage[demo]{pdfpages}
+\usepackage{pdfpages}
 
 \usepackage[htt]{hyphenat}
 
-\usepackage[acronym]{glossaries}
+\usepackage[acronym, nonumberlist,]{glossaries}
 
 % for H1. H2. enumeration
 \usepackage{enumitem}
@@ -68,6 +117,13 @@
 \usepackage{changepage}
 
 \usepackage{acro}
+
+%upright greek characters
+%\usepackage[upgreek, LGRgreek]{mathastext}
+%capital greek letters
+%\usepackage{unicode-math} %won't compile with pdfLatex
+
+
 
 % for C# code formatting
 \usepackage{color}
@@ -216,9 +272,13 @@ breaklines=true,
 \newcommand{\Leftbrace}[1]{\left(\raisebox{0mm}[#1][#1]{}\right.}
 \newcommand{\Rightbrace}[1]{\left.\raisebox{0mm}[#1][#1]{}\right)}
 
+%should send footnotes to very bottom of page
+\usepackage[bottom]{footmisc}
 % Funky symobols for footnotes
 \newcommand{\symbolfootnote}{\renewcommand{\thefootnote}{\fnsymbol{footnote}}}
 % now add \symbolfootnote to the beginning of the document...
+% update footnote counter for each chapter
+\counterwithin*{footnote}{chapter}
 
 \newcommand{\normallinespacing}{\renewcommand{\baselinestretch}{1.5} \normalsize}
 \newcommand{\mediumlinespacing}{\renewcommand{\baselinestretch}{1.2} \normalsize}

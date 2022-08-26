@@ -1,87 +1,97 @@
 \chapter{Methodology}
 \label{ch:methodology}
 
-Methodology chapter.
-
+\newpage
 \section{Synthetic Techniques}
-\subsection{Hydrothermal carbonisation}
+The synthesis of samples in this work is quite simple and involves the \gls{pyrolysis} of carbon-rich material with the aim of \gls{activation}, i.e. the formation of pores in the semi-graphitic structure. In some cases, \gls{htc} is employed to make the material more susceptible to \gls{activation}.
+
+\subsection{Hydrothermal Carbonisation}
+\Gls{htc} is often used in the synthesis of \glspl{turbostratic carbon} to make the precursor easier to activate. The process consists of simply placing a mixture of the precursor (typcially biomass) and water into a sealed vessel and heating to temperatures between 180 and \qty{300}{\degreeCelsius}. The ease of activation is attributed to the solid product, known as \gls{hydrochar}, having a high \ce{O} content and low aromaticity.\citep{Sevilla2011Hydrothermal, Sevilla2009Chemical, Sevilla2009a} Indeed, the interaction with water molecules results in the formation of microspheres with a hydrophobic core and hydrophilic shell; this means that any \gls{porogen} used in a subsequent activation step has much greater contact with with these \ce{O}-rich moieties. 
+
+In this work, all \gls{htc} was performed in a teflon-lined stainless steel autoclave and heated using an oven. Ramp rate was consistently set at \qty{5}{\degreeCelsius\per\minute} and the dwell time was \qty{2}{\hour}. Dwell temperature and gravimetric concentration of the precursor/water mixture is dependent upon the experiment; more details can be found in the synthetic sections of the relevant chapters.
+
 \subsection{Activation}
+In the context of porous carbon materials, activation is the process of porosity development in carbonaceous material.\citep{Sevilla2014Energy} There is a significant, detailed explanation of activation processes in \ref{pub:review}, \textbf{section 2.1.}. In this work, activation is principally conducted \textit{via} chemical oxidation,\citep{Sevilla2014Energy} that is by the oxidative action of a caustic agent - either \ce{KOH} (chapter \ref{ch:cbs} and \ref{ch:impregnation}) or the self-activation of a polymer containing \ce{Na+} ions (chapter \ref{ch:impregnation}) - on the carbon framework of the precursor. The oxidation of \ce{C} to \ce{CO2} and/or \ce{CO32-} results in voids forming in the semi-graphitic structure.\citep{Wang2009High, Wang2012, Otowa1993Production} Further pore-forming processes may include intercalation of free \gls{porogen} ions between graphitic layers,\citep{LozanoCastello2007Carbon} as well as the formation of cross-links between polymeric chains prior to carbonisation.\citep{lin2015preparation, yu2017koh, yu2017one}
+
+The relevance of each of these pore formation processes, as well as the synthetic procedures are described in the relevant chapters, however in all cases activation of the precusor-\gls{porogen} mixture was performed by placing the mixture into an alumina boat, and heating under a flow of dry \ce{N2} (\qty{60}{\cm\cubed\per\minute}) in a tube furnace. Dwell time was consistently \qty{1}{\hour} and ramp rate \qty{3}{\degreeCelsius\per\minute}.
 
 \section{Analytical Techniques}
+Techniques in this section were employed to understand the composition, structure, and porosity of samples synthesised in this work. They are particularly relevant to chapters \ref{ch:cbs} and \ref{ch:impregnation}. The more precise compositional analysis techniques - \acrfull{xps} and \acrfull{icp-oes} - as well as electron microscopy were only used for samples produced from \acrfullpl{ucb} in chapter \ref{ch:cbs}. Chapters \ref{ch:dual_isotherm} and \ref{ch:pyPUC} rely primarily on analysis of data from porosimetry and gravimetric uptake techniques.
 
 \subsection{Thermogravimetric Analysis}
-Thermogravimetric Analysis (TGA) the mass of a sample as a function of temperature or time.\citep{coats1963thermogravimetric} TGA was used in this study primarily to determine the ash content of samples, thus giving a measure of sample purity.\citep{mcnaught1997compendium}
+\acrfull{tga} measures the mass of a sample undergoing heating as a function of temperature or time.\citep{coats1963thermogravimetric} \acrshort{tga} was used in this study primarily to determine the \gls{ash content} of samples, thus giving a measure of sample purity,\citep{mcnaught1997compendium} i.e. whether the material contains any non-combustible matter, typically residual metals.
 
-Thermogravimetric analysis was performed using a TA Q500 Thermogravimetric Analyser. All samples were analysed using a platinum pan and in the presence of air. The parameters for all experiments were: Ramp 10 $\rm ^{\circ}C\ min^{-1}$ from 20-1000 $\rm ^{\circ}C$ with an isotherm for 10 minutes at 1000 $\rm ^{\circ}C$, gas flow: 60 $\rm mL\ min^{-1}$.
+\acrshort{tga} was performed using a TA Q500 Thermogravimetric Analyser. All samples were analysed using a platinum pan and in the presence of air. All experiments took place as follows; temperature was increased at \qty{10}{\degreeCelsius\per\minute} from ambient to \qty{1000}{\degreeCelsius} before dwelling for \qty{10}{\minute}, all the while having an air flow rate of \qty{60}{\cm\cubed\per\minute}.
 
 \subsection{CHN Elemental Microanalysis}
-CHN elemental microanalysis precisely determines the concentration by weight of carbon, nitrogen and hydrogen that make up a sample. This is achieved by total combustion of the sample at 975 $\rm ^{\circ}C$ under pure oxygen, at this stage impurities such as sulfur, phosphorous, and halogen compounds are also removed via various reactions. This results in a pure mixture of \ce{H2O}, \ce{CO2} and oxides of nitrogen, which is transferred by means of a flow of He to a reduction chamber where the nitrogen oxides are reduced to \ce{N2}. This mixture of three sample gases plus the He carrier gas is then equilibrated to precise and constant temperature, volume and pressure. \ce{H2O} and \ce{CO2} are then sequentially separated according to their thermal conductivity, leaving a flow of \ce{N2} and \ce{He}. The volume of \ce{H2O} and \ce{CO2} can then directly be used to calculate the \ce{H} and \ce{C} concentrations. The mixture of \ce{N2} and \ce{He} is compared with a reference flow of pure \ce{He} to determine \ce{N} content.
+CHN elemental microanalysis precisely determines the concentration (by weight) of carbon, nitrogen and hydrogen that make up a sample. This is achieved by total combustion of the sample at \qty{975}{\degreeCelsius} under pure oxygen. At this stage impurities such as sulfur, phosphorous, and halogen compounds are also removed \textit{via} various reactions. This results in a pure mixture of \ce{H2O}, \ce{CO2} and oxides of nitrogen, which is transferred by means of a flow of He to a reduction chamber where the nitrogen oxides are reduced to \ce{N2}. This mixture of three sample gases plus the He carrier gas is then equilibrated to precise and constant temperature, volume and pressure. \ce{H2O} and \ce{CO2} are then sequentially separated according to their thermal conductivity, leaving a flow of \ce{N2} and \ce{He}. The volumes of \ce{H2O} and \ce{CO2} can then directly be used to calculate the sample \ce{H} and \ce{C} concentrations. The mixture of \ce{N2} and \ce{He} is compared with a reference flow of pure \ce{He} to determine \ce{N} content.
+
+CHN analysis was performed using an Exeter Analytical CE-440 Elemental Analyzer for the purposes of this work.
 % find citation
 % particular details of machine.
 
 \subsection{Powder X-ray Diffraction}
 
-Powder X-ray Diffraction (P-XRD) is principally used to identify elements and determine interlayer spacing within crystaline powder samples. The latter, $d$ is determined simply according to the angle of diffraction, $\theta$ using the Bragg equation;
+\acrfull{p-xrd} is principally used to identify elements and determine inter-layer spacing within crystalline powder samples. The latter, $d$ is determined simply according to the angle of diffraction, $\theta$ using the Bragg equation;
 
 \begin{equation}
     n\lambda = 2 d \sin{\theta}
 \end{equation}
 
-Where $n$ is the layer number and $\lambda$ the wavelength of X-rays used.\citep{woolfson1997introduction} In the case of unordered turbostratic carbons and hydrochars P-XRD is used to determine the extent of graphiticity (i.e. how ordered the turbostratic domains are). In addition sharp peaks indicate the presence of crystalline material, which can be attributed to contaminants - typically residual porogen.
+Where $n$ is the layer number and $\lambda$ the wavelength of X-rays used.\citep{woolfson1997introduction} In the case of unordered \glspl{turbostratic carbon} and \glspl{hydrochar} \acrshort{p-xrd} is used to determine the extent of graphiticity (i.e. how ordered the turbostratic domains are). In addition sharp peaks indicate the presence of crystalline material, which can be attributed to contaminants - typically residual \gls{porogen}.
 
-In this study, P-XRD measurements were made using a PANalytical X’Pet Pro diffractometer, with \ce{Cu}K$\alpha$ X-rays of $\lambda\ =\ 1.54$ \AA. Data collection occurred at $2\theta\ =\ 2-80^{\circ}$.
+In this study, \acrshort{p-xrd} measurements were made using a PANalytical X’Pet Pro diffractometer, with \ce{Cu}K\textgreek{α} X-rays of $\lambda$ \qty{1.54}{\angstrom}. Data collection occurred at $2\theta$ between \num{2} and \qty{80}{\degreeCelsius}.
 
 \subsection{X-ray Photoelectron Spectroscopy}
 
-X-ray photoelectron spectra are produced \textit{via} the irradiation a sample with an X-ray beam, resulting in the ejection of electrons from low energy atomic orbitals according to the photoelectric effect,\citep{richardson1912liii}. The electrons are collected and detected by the apparatus, facilitating the elucidation of the identity and quantity of elements present in the material from the kinetic energy of ejected electrons and the number of electrons ejected at each binding energy, respectively. The binding energy, $E_B$ is calculated according to the below equation;
+X-ray photoelectron spectra are produced \textit{via} the irradiation of a sample with an X-ray beam, resulting in the ejection of electrons from low energy atomic orbitals according to the photoelectric effect\citep{richardson1912liii}. The electrons are collected and detected by the apparatus, facilitating the elucidation of the identity and quantity of elements present in the material from the kinetic energy of ejected electrons and the number of electrons ejected at each binding energy, respectively. The binding energy, $E_B$ is calculated according to the below equation;
 
 \begin{equation}
     E_B = h\nu - \Phi - E_K
 \end{equation}
 
-where $h\nu$ is the photon energy, $\Phi$ is the sample’s work function, and $E_K$ is the kinetic energy of the photoelectron. So-called 'shifting' of elemental characteristic binding energies can be used to determine chemical and electronic states of detected species.\citep{moulder1995handbook}
+where $h\nu$ is the photon energy, $\Phi$ is the sample’s work function, and $E_K$ is the kinetic energy of the photoelectron. So-called `shifting' of elemental characteristic binding energies can be used to determine chemical and electronic states of detected species.\citep{moulder1995handbook}
 
-Samples were prepared from selected hydrochars and turbostratic carbons by performing a TGA in air to burn off all carbonaceous material. The remaining inorganic matter was then analysed using the Kratos AXIS ULTRA with a mono-chromated Al $\rm k\alpha$ X-ray source (1486.6 eV) operated at 10 mA emission current and 12 kV anode potential (120 W). Spectra were acquired with the Kratos VISION II software. A charge neutralizer filament was used to prevent surface charging. Hybrid–slot mode was used measuring a
-sample area of approximately 300 x 700 $\rm \mu m$. The analysis chamber pressure was better than $\rm \num{5e-9}\ mbar$. Three areas per sample were analysed. A wide scan at low resolution (Binding energy range 1400 eV to -5 eV, with pass energy 80 eV, step 0.5 eV, sweep time 20 minutes) was used to estimate the total atomic \% of the detected elements. High resolution spectra at pass energy 20 eV, step of 0.1 eV, and sweep times of 10 minutes each were also acquired for photoelectron peaks from the detected elements and these were used to model the chemical composition. The spectra were charge corrected to the C 1s peak set to 285 eV. Casaxps (version 2.3.19 PR1.0) software was used for quantification and spectral modelling.
+Samples were prepared from selected \glspl{hydrochar} and \glspl{turbostratic carbon} by performing a \acrshort{tga} in air to burn off all carbonaceous material. The remaining inorganic matter was then analysed using the Kratos AXIS ULTRA with a mono-chromated \ce{Al}k\textgreek{α} X-ray source (\qty{1486.6}{\electronvolt}) operated at \qty{10}{\mA} emission current and \qty{12}{\kilo\volt} anode potential (\qty{120}{\watt}). Spectra were acquired with the Kratos VISION II software. A charge neutralizer filament was used to prevent surface charging. Hybrid–slot mode was used measuring a sample area of approximately \qtyproduct{300 x 700}{\micro\metre}. The analysis chamber pressure was better than \qty{5e-9}{\milli\bar}. Three areas per sample were analysed. A wide scan at low resolution (Binding energy range \qtyrange{1400}{-5}{\electronvolt}, with pass energy \qty{80}{\electronvolt}, step \qty{0.5}{\electronvolt}, sweep time \qty{20}{\minute}) was used to estimate the total atomic \% of the detected elements. High resolution spectra at pass energy \qty{20}{\electronvolt}, step of \qty{0.1}{\electronvolt}, and sweep times of \qty{10}{\minute} each were also acquired for photoelectron peaks from the detected elements and these were used to model the chemical composition. The spectra were charge corrected to the C 1s peak set to \qty{285}{\electronvolt}. Casaxps (version 2.3.19 PR1.0) software\citep{fairley2021systematic} was used for quantification and spectral modelling.
 
 \subsection{Inductively Coupled Plasma - Optical Emission Spectrometry}
 
-Optical Emission Spectrometry (OES), also known as Atomic Emission Spectrometry (AES) is a technique used to quantify concentration of elements in solution by exciting them and measuring intensity of emissions at some characteristic wavelength associated with the return of the species to the ground state. These intensities are then converted to concentrations using a calibration curve. While there are multiple methods to excite the atoms, a common method is using Inductively Coupled Plasma (ICP) which also acts to separate elements in the solution. This technique is thus abbreviated to ICP-OES or ICP-AES.\citep{Hinners1988interlaboratory}
+Optical Emission Spectrometry (OES), also known as Atomic Emission Spectrometry (AES) is a technique used to quantify concentration of elements in solution by exciting them and measuring intensity of emissions at some characteristic wavelength associated with the return of the species to the ground state. These intensities are then converted to concentrations using a calibration curve. While there are multiple methods to excite the atoms, a common method is using Inductively Coupled Plasma (ICP) which also acts to separate elements in the solution. This technique is thus abbreviated to \acrshort{icp-oes} or ICP-AES.\citep{Hinners1988interlaboratory}
 
-Samples were prepared by dry-ashing in an alumina crucible at 600 $\rm ^{\circ}C$ for at least 16 h, the ash was then digested in an aqueous solution of 10\% each high purity \ce{HNO3} and \ce{HCl} (Aristar grade). The mixture was then sonicated for several hours, and digestion was completed via microwave, before being centrifuged at 4000 rpm for 99 min. Finally the digestate was filtered through syringe filters to remove any remaining sediment. References and blanks were prepared from the same stock digestion solution to ensure consistency. Standards were made from a 28-element standard (100 $\rm mg\ L^{-1}$, 2\% \ce{HNO3} matrix from Fisher) at concentrations of 0.1, 1, 10, 50, and 100 $\rm mg\ L^{-1}$. Measurements were made using a Perkin-Elmer Optima 2000 Spectrometer, using argon plasma.
+Samples were prepared by dry-ashing in an alumina crucible at \qty{600}{\degreeCelsius} for at least \qty{16}{\hour}, the ash was then digested in an aqueous solution of \qty{10}{\volpercent} each of high purity \ce{HNO3} and \ce{HCl} (Aristar grade). The mixture was then sonicated for several hours, and digestion was completed via microwave, before being centrifuged at \qty{4000}{rpm} for \qty{99}{\minute}. Finally the digestate was filtered through syringe filters to remove any remaining sediment. References and blanks were prepared from the same stock digestion solution to ensure consistency. Standards were made from a 28-element standard (\qty{100}{\mg\per\dm\cubed}, \qty{2}{\volpercent} \ce{HNO3} matrix from Fisher) at concentrations of \qtylist[list-units = single]{0.1;1;10;50;100}{\mg\per\dm\cubed}. Measurements were made using a Perkin-Elmer Optima 2000 Spectrometer, using argon plasma.
 
 \subsection{Electron Microscopy}
-% needs work
-\paragraph{Scanning Electron Microscopy (SEM)} uses a beam of focused electrons in order to image solid materials. As the electrons interact with the material, electrons and electromagnetic radiation are emitted via various mechanisms. Secondary electrons (SE) are a result of the ejection of electrons from atoms near the sample surface, and secondary electron images (SEI) provide high resolution images of surface morphology and texture.\citep{Goldstein2017Scanning} 
+Electron microscopy was used on the samples in chapter \ref{ch:cbs} in order to determine sample morphology as well as composition and dispersion of inorganic heteroatoms.
 
-\paragraph{Backscatter electrons (BSE)} are electrons deflected by nuclear electrostatic charge – degree of deflection increases with nuclear charge. Though this results in much lower resolution images, backscatter electron detection (BED) images the material according to atomic weight, with heavier elements showing up as bright spots. This technique does not identify elements, but can be used to map heavier elements interspersed within a low atomic mass material.\citep{Goldstein2017Scanning}
+\paragraph{\acrfull{sem}} uses a beam of focused electrons in order to image solid materials. As the electrons interact with the material, electrons and electromagnetic radiation are emitted via various mechanisms. \Acrfull{se} are a result of the ejection of electrons from atoms near the sample surface, and \acrfull{sei} provide high resolution images of surface morphology and texture.\citep{Goldstein2017Scanning} 
 
-\paragraph{Tunneling Electron Microscopy (TEM)}
+\paragraph{\acrfull{bse}} are electrons deflected by nuclear electrostatic charge – degree of deflection increases with nuclear charge. Though this results in much lower resolution images, \acrfull{bed} images the material according to atomic weight, with heavier elements showing up as bright spots. This technique does not identify elements, but can be used to map heavier elements interspersed within a low atomic mass material.\citep{Goldstein2017Scanning}
 
-\paragraph{Electron-Dispersive X-ray Analysis (EDX)} bla
+\paragraph{\acrfull{tem}} differs from \acrshort{sem} in that the electrons are transmitted through the sample as opposed to reflecting off of it. Imaging with \acrshort{tem} allows for much more detailed imaging, down to the atomic scale.\citep{knoll1932elektronenmikroskop}
 
-\par SEM images were taken on a JEOL 7100F FEG-SEM with detector set at a working distance of 10.00 mm. SE images were captured with an electron accelerating voltage of 1.00 or 2.00 kV, but this was increased to 15.00 kV for BSE.
+\paragraph{\acrfull{edx}} relies on the excitation by X-rays of electrons within a sample to identify and quantify its elemental components. It can be coupled with \acrshort{tem} in order to image the dispersion of elements within a sample, this technique is known as \acrshort{edx}-\acrshort{tem}.\citep{Goldstein2017Scanning}
 
-\subsection{Porosimetry}
+\par \acrshort{sem} images were taken on a JEOL 7100F FEG-SEM with detector set at a working distance of 10.00 mm. SE images were captured with an electron accelerating voltage of 1.00 or 2.00 kV, but this was increased to 15.00 kV for BSE. %find TEM information
+
+\subsection{Porosimetry}\label{ss:porosimetry}
 
 \textbf{Section 3.4.} of \ref{pub:review} gives a fairly thorough explanation of porosimetric techniques and calculations, especially as they relate to porous carbons. What follows however may prove helpful in terms of understanding some of the more fundamental theory. 
 
 \subsubsection{The adsorption experiment}
-Physical adsorption, or physisorption is the process whereby molecules of a fluid (the adsorbate) are associated with a solid surface (the adsorbent) via London forces. Given the molecular diameter, volume, and cross-sectional area of the adsorbate
-certain structural and textural properties of the adsorbent can be determined.\citep{Brunauer1938Adsorption} A physisorption experiment therefore begins with some known mass of degassed adsorbent held under vacuum at constant temperature (often the boiling point of the adsorbate). The sample is then dosed with a known quantity of adsorbent, and the system is allowed to equilibrate. Once equilibrium is reached the relative pressure of the system is determined, which is used to calculate the quantity of gas adsorbed by the sample. This process of dosing the sample with gas and equilibration is repeated until the sample is saturated or some other predetermined pressure is reached. This often precedes the so-called desorption experiment, whereby adsorbate is removed from the sample in increments, and the system allowed to equilibrate as previously. The results take the form of an isotherm where quantity adsorbed is plotted against
+Physical \gls{adsorption}, or physisorption is the process whereby molecules of a fluid (the \gls{adsorbate}) are associated with a solid surface (the \gls{adsorbent}) via London forces. Given the molecular diameter, volume, and cross-sectional area of the \gls{adsorbate} certain structural and textural properties of the \gls{adsorbent} can be determined.\citep{Brunauer1938Adsorption} A physisorption experiment therefore begins with some known mass of degassed \gls{adsorbent} held under vacuum at constant temperature (often the boiling point of the \gls{adsorbate}). The sample is then dosed with a known quantity of \gls{adsorbent}, and the system is allowed to equilibrate. Once equilibrium is reached the relative pressure of the system is determined, which is used to calculate the quantity of gas adsorbed by the sample. This process of dosing the sample with gas and equilibration is repeated until the sample is saturated or some other predetermined pressure is reached. This often precedes the so-called desorption experiment, whereby \gls{adsorbate} is evacuated from the sample in increments, and the system allowed to equilibrate as previously. The results take the form of an isotherm where quantity adsorbed is plotted against
 relative pressure.\citep{Brunauer1938Adsorption, Langmuir1916constitution, Thommes2015Physisorption}
 
-\ce{N2} at 77 K or Ar at 87 K are the most common adsorbates used in physisorption experiments; while \ce{Ar} is recommended by IUPAC,\citep{Thommes2015Physisorption} the relative expense of maintaining \ce{Ar} at it's boiling point means that \ce{N2} is more common. Apart from being inert, cheap and available, an adsorptive must also have minimal polarity so as to not interact more strongly with polar moieties on a heterogeneous surface. Additionally all (open) pores of interest should be accessible to the adsorbate at the analytical temperature. For these reasons, alternative gases such as \ce{H2}, \ce{O2}, and \ce{CO2} have found applications in recent years.\citep{Jagiello2019Enhanced, Blankenship2022Confirmation, Jagiello2008Characterization}
+\ce{N2} at \qty{196}{\degreeCelsius} or \ce{Ar} at \qty{186}{\degreeCelsius} are the most common \glspl{adsorbate} used in physisorption experiments; while \ce{Ar} is recommended by \acrshort{iupac},\citep{Thommes2015Physisorption} the relative expense of maintaining \ce{Ar} at its boiling point means that \ce{N2} is more common. Apart from being inert, cheap and available, an adsorptive must also have minimal polarity so as to not interact more strongly with polar moieties on a heterogeneous surface. Additionally all `open' (see section \ref{ss:pore_filling}) pores of interest should be accessible to the \gls{adsorbate} at the analytical temperature. For these reasons, alternative gases such as \ce{H2}, \ce{O2}, and \ce{CO2} have found applications in recent years.\citep{Jagiello2019Enhanced, Blankenship2022Confirmation, Jagiello2008Characterization}
 
 \subsubsection{Langmuir Theory}
 
-Irving Langmuir was among the first to develop a theory of adsorption of gases onto solid surfaces. The theory assume a reversible reaction between an ideal adsorbate, $A_g$ and an adsorption site, $S$ to form the adsorbed complex, $A_{ad}$. The reaction proceeds until it reaches equilibrium with constant $K_{eq}$;
+Irving Langmuir was among the first to develop a theory of \gls{adsorption} of gases onto solid surfaces. The theory assume a reversible reaction between an ideal \gls{adsorbate}, $A_g$ and an \gls{adsorption} site, $S$ to form the adsorbed complex, $A_{ad}$. The reaction proceeds until it reaches equilibrium with constant $K_{eq}$;
 
 \begin{equation}
     \ce{A_g + S <=>[K_{eq}] A_{ad}}
 \end{equation}
 
-From this can be derived the Langmuir isotherm, which is a relationship between the fractional occupancy of adsorbed sited, $\theta$ to the partial pressure of the adsorbate, $P_A$ and the equilibrium constant; 
+From this can be derived the Langmuir isotherm, which is a relationship between the fractional occupancy of adsorbed sited, $\theta$ to the partial pressure of the \gls{adsorbate}, $P_A$ and the equilibrium constant; 
 
 \begin{equation}
     \frac{P_A}{Q} = \frac{1}{K_{eq}} + Q_m \, P_A
@@ -97,89 +107,93 @@ The linear plot of $\frac{P_A}{Q}$ against $P_A $ from experimental data will th
 
 \subsubsection{Brunauer, Emmet and Teller Theory}
 
-Stephen Brunauer, Paul Emmet, and Edward Teller expanded Langmuir theory to account for multilayer adsorption, which occurs at higher pressures and temperatures. The following assumptions are made;
+Stephen Brunauer, Paul Emmet, and Edward Teller expanded Langmuir theory to account for multilayer \gls{adsorption}, which occurs at higher pressures and temperatures. The following assumptions are made;
 
-	\begin{enumerate}
+	\begin{enumerate}[label=(\arabic*)]
 		\item Gas molecules adsorb on solid layers infinitely;
 		\item Gas molecules only interact with adjacent layers;
 		\item The Langmuir theory can be applied to each layer.
-		\item The enthalpy of adsorprtion for the first layer is constant and greater than that for subsequent layers;
-		\item After monolayer adsorption, the enthalpy of adsorption is the same as that of liquefaction.
+		\item The enthalpy of \gls{adsorption} for the first layer is constant and greater than that for subsequent layers;
+		\item After monolayer \gls{adsorption}, the enthalpy of \gls{adsorption} is the same as that of liquefaction.
 	\end{enumerate}
 
 The total quantity of gas adsorbed, $Q$ is related the quantity of the monolayer, $Q_m$ by; 
 
-\begin{equation}
+\begin{equation} \label{eq:bet_plot}
     \frac{1}{Q  \left( \frac{P_0}{P} - 1 \right)} = \frac{c-1}{Q_m \, c}  \left( \frac{P}{P_0} \right) + \frac{1}{Q_m \, c}
 \end{equation}
 
-Where $c$ is the BET constant, derived from the heat of adsorption of the first layer, $E_1$ and that of the subsequent layers, $E_L$;
+Where $c$ is the \acrshort{bet} constant, derived from the heat of \gls{adsorption} of the first layer, $E_1$ and that of the subsequent layers, $E_L$;
 
 \begin{equation}
     c = e^{\frac{E_1 - E_L}{RT}}
 \end{equation}
 
-From an isotherm, a plot can then be made of the left hand term versus $\frac{P}{P_0}$ to yield what is known as the BET transform. Thus $Q_m$ and $c$ can be determined from the linear portion of this plot. Then, the specific BET surface area $A_{BET}$ of the sample can be determined using the adsorption cross-section, $\sigma$ of the adsorptive;
+From an isotherm, a plot can then be made of the left hand term in equation \ref{eq:bet_plot} versus $\frac{P}{P_0}$ to yield what is known as the \acrshort{bet} transform. Thus $Q_m$ and $c$ can be determined from the linear portion of this plot. Then, the specific \acrshort{bet} area, $A_{BET}$ of the sample can be determined using the \gls{adsorption} cross-section, $\sigma$ of the adsorptive;
 
 \begin{equation}
     A_{BET} = \frac{Q_m \, N_A \, \sigma}{a}
 \end{equation}
 
 
-Where $N_A$ is the Avogadro constant and $a$ is the mass of the adsorbent.\citep{Brunauer1938Adsorption}
+Where $N_A$ is the Avogadro constant and $a$ is the mass of the \gls{adsorbent}.\citep{Brunauer1938Adsorption}
 
 \paragraph{The Rouquerol Adaptation}
 
-For microporous materials, using the BET method to calculate surface area is problematic for two reasons;
+For microporous materials, using the \acrshort{bet} method to calculate surface area is problematic for two reasons;
 
-	\begin{enumerate}
-		\item The initial step in the adsorption mechanism is not the formation of the monolayer, but the filling of micropores. This renders BET theory inaccurate for microporous materials.
-		\item 	Following the BET transform, there are often multiple linear regions of the plot. This means that reported $A_{BET}$ may be inconsistent.
+	\begin{enumerate}[label=(\arabic*)]
+		\item The initial step in the \gls{adsorption} mechanism is not the formation of the monolayer, but the filling of \glspl{micropore}. This renders \acrshort{bet} theory inaccurate for microporous materials.
+		\item 	Following the \acrshort{bet} transform, there are often multiple linear regions of the plot. This means that reported $A_{BET}$ may be inconsistent.
 	\end{enumerate}
 
-Despite these problems, $A_{BET}$ continues to be the dominant measure of surface area used for microporous materials. As yet, there is no widespread alternative or extension of BET theory that solves 1., however the standardisation required according to 2. is most commonly achieved according to a method described by Rouquerol et al, where the BET plot is transformed by changing the term on the y-axis to $Q \left(1 - \frac{P}{P_0} \right)$. This yields a roughly parabolic graph known as the Rouquerol transform. A pressure range of the BET transform can then be selected to yield a consistent calculation of $A_{BET}$ according to the following principles;
+Despite these problems, $A_{BET}$ continues to be the dominant measure of surface area used for microporous materials. As yet, there is no widespread alternative or extension of \acrshort{bet} theory that solves (1), however the standardisation required according to (2) is most commonly achieved according to a method described by Rouquerol et al, where the \acrshort{bet} plot is transformed by changing the term on the y-axis to $Q \left(1 - \frac{P}{P_0} \right)$. This yields a roughly parabolic graph known as the Rouquerol transform. A pressure range of the \acrshort{bet} transform can then be selected to yield a consistent calculation of $A_{BET}$ according to the following principles;
 
-	\begin{enumerate}
-		\item The intercept of the original BET transform must be positive, as otherwise this would yield a negative value for $c$.
+	\begin{enumerate}[label=(\arabic*)]
+		\item The intercept of the original \acrshort{bet} transform must be positive, as a negative intercept would yield a negative value for $c$.
 		\item The range selected must correspond to a region of the Rouquerol transform where $Q \left(1 - \frac{P}{P_0} \right)$ constantly increases with $\frac{P}{P_0}$.
-		\item $Q_m$ as determined from 1. and 2. can be found in the region of the isotherm selected.\citep{Rouquerol2007Is} 
+		\item $Q_m$ as determined from (1) and (2) can be found in the region of the isotherm selected.\citep{Rouquerol2007Is} 
 	\end{enumerate}
 
 \subsubsection{Application of Density Functional Theory to Porosity Determination}
+\label{sss:dft}
 
-Classical models for pore structure rely on parameters including (but not limited to) the monolayer capacity of the adsorbent, as well as the adsorbate-adsorbent interaction. Additionally, they make use of false assumptions such as that the adsorbate behaves as a two-dimensional ideal gas (in the case of the Horvath-Kawazoe model). Conversely, Density Functional Theory (DFT) when applied to porosity makes use of statistical modelling of adsorbate-adsorbate and adsorbate-adsorbent interactions specific to a system defined by pore size, pore geometry, the adsorptive and temperature.
+Classical models for pore structure rely on parameters including (but not limited to) the monolayer capacity of the \gls{adsorbent}, as well as the \gls{adsorbate}-\gls{adsorbent} interaction. Additionally, they make use of false assumptions such as that the \gls{adsorbate} behaves as a two-dimensional ideal gas (in the case of the Horvath-Kawazoe model). Conversely, Density Functional Theory (DFT) when applied to porosity makes use of statistical modelling of \gls{adsorbate}-\gls{adsorbate} and \gls{adsorbate}-\gls{adsorbent} interactions specific to a system defined by pore size, pore geometry, the adsorptive and temperature.
 
-The simplest system is described by a surface with single width, slit shaped pores under vacuum. This is then dosed with argon at a specified pressure. As this occurs, argon atoms will begin to fill the pore, causing pressure in the bulk adsorbate to decrease until an equilibrium is reached between the bulk argon and that adsorbed within the pore. According to the theory of dispersion interactions, the argon should be most concentrated at the surface at equilibrium – this concentration is the amount of gas adsorbed at the given pressure, i.e. one point on an isotherm. This can be calculated via by minimising the free energy of the system as given by the Lennard-Jones potential, $U(s)$;
+The simplest system is described by a surface with single width, slit shaped pores under vacuum. This is then dosed with argon at a specified pressure. As this occurs argon atoms will begin to fill the pore, causing pressure in the bulk \gls{adsorbate} to decrease until an equilibrium is reached between the bulk argon and that adsorbed within the pore. According to the theory of dispersion interactions, the argon should be most concentrated at the surface at equilibrium – this concentration is the amount of gas adsorbed at the given pressure, i.e. one point on an isotherm. This amount can be calculated via by minimising the free energy of the system as given by the Lennard-Jones potential, $U(s)$;
 
 \begin{equation}
 U(s) = 4\varepsilon \left[ \left(\frac{\sigma}{s}\right)^{12} -  \left(\frac{\sigma}{s}\right)^{6} \right]
 \end{equation}
 
-Where $s$ is the distance between gas and surface, $\varepsilon$ is the energy of the adsorbate; and $\sigma$ is the molecular diameter of the adsorbate.  Thus, by varying the pressure from ultra-low to saturation, the amount of adsorptive adsorbed at defined pressures can be calculated, and from this a model isotherm of this simple theoretical system can be built. 
+Where $s$ is the distance between gas and surface, $\varepsilon$ is the energy of the \gls{adsorbate}; and $\sigma$ is the molecular diameter of the \gls{adsorbate}.  Thus, by varying the pressure from ultra-low to saturation, the amount of gas adsorbed at defined pressures can be calculated, and from this a model isotherm of this simple theoretical system can be built. 
 
-In practice, the equilibrium density profile is built up by minimising the grand potential energy of the system as a function of density $\Omega[\rho(r)]$, which is calculated for a point $r$ in the system as follows;
+In practice, the equilibrium density profile is built up by minimising the grand potential energy of the system as a function of density, $\Omega[\rho(r)]$ - which is calculated for a point $r$ in the system as follows;
 
 \begin{equation}
-\Omega[\rho(r)] = F[\rho(r)] + \int \rho(r)\left(V(r) - \mu\right) \,dr
+\Omega[\rho(r)] = F[\rho(r)] + \int \rho(r)\left(V(r) - \mu\right) \,\rm{d}r
 \end{equation}
 
 The latter term defines the gas properties via the ideal gas equations according to the potential acting on the molecule $V(r)$, while $F[\rho(r)]$ is the Helmholtz free energy of the gas at equilibrium density at point $r$. $F[\rho(r)]$ is defined composed of repulsive (hard sphere) and attractive interactions between gas molecules. This treatment results in the local density approximation, which assumes that a local part of an inhomegeneous system has the same free energy density as a bulk homogeneous system of the same density. The inaccuracy of this treatment has led to further development of the theory via non-localised methods (NLDFT),  \citep{tarazona1987phase, lastoskie1993pore, landers2013density} 
 as well as a corrugated pore model to account for energetic heterogeneity, as developed by Jagiello et al.\citep{Jagiello20132D}
 
-Regardless of the method, the computational generation of an isotherm is repeated across a range of pore widths to generate a library of isotherms for a specific adsorbate-adsorbent system known as the kernel, $N\left(\frac{P}{P_0}, \, W\right)$. The general adsorption integral equation (equation \ref{eq:GAI}) is then used to correlate the experimental isotherm, $N\left(\frac{P}{P_0}\right)$  with the kernel, resulting in the pore size distribution as a function of pore width, $f(W)$.\citep{Thommes2015Physisorption}
+Regardless of the method, the computational generation of an isotherm is repeated across a range of pore widths to generate a library of isotherms for a specific \gls{adsorbate}-\gls{adsorbent} system known as the kernel, $N\left(\frac{P}{P_0}, \, W\right)$. The general \gls{adsorption} integral equation (equation \ref{eq:GAI}) is then used to correlate the experimental isotherm, $N\left(\frac{P}{P_0}\right)$  with the kernel, resulting in the pore size distribution as a function of pore width, $f(W)$.\citep{Thommes2015Physisorption}
 
 \begin{equation} \label{eq:GAI}
-    N\left(\frac{P}{P_0}\right) = \int_{W_{min}}^{W_{max}} N\left(\frac{P}{P_0}, \, W \right) f(W) \, dW
+    N\left(\frac{P}{P_0}\right) = \int_{w_{min}}^{w_{max}} N\left(\frac{P}{P_0}, \, w \right) f(W) \, \mathrm{d}w
 \end{equation}
 
 This data can be displayed in terms of differential or cumulative pore volume and surface area, and as such can be used to determine textural quantities previously calculated via classical methods.
 
-\subsection{\texorpdfstring{Gravimetric \ce{CO2} uptake}{Gravimetric CO2 uptake}}
-The \ce{CO2} uptake of turbostratic carbon samples was determined via gravimetric analysis. This begins with the degassing of the samples under vacuum followed by precise measurement of the weight of the sample with increasing \ce{CO2} pressure. This yields a \ce{CO2} uptake isotherm, from which molar uptake can be read at pertinent pressures.
+\paragraph{In this work} All isotherms were measured on a 3flex analyser (Micromeritics). $A_{BET}$ and total pore volume ($V_t$) were determined using the Rouquerol method (where appropriate), and the single point method respectively. Classical deterimanation of \gls{micropore} volume and surface area were determined using t-plot, with a carbon black STSA thickness curve. All \acrshortpl{psd} are derived using the 2D-NLDFT heterogeneous surface kernel.\citep{Jagiello20132D} The rationale for, and derivation of this kernel is discussed in section \ref{ss:2d-nldft-hs}. While it is used in prior chapters, its importance and functionality is not relevant except as a preamble to the discussion and evaluation of porosimetric techniques in chapter \ref{ch:dual_isotherm}. Chapter \ref{ch:dual_isotherm} is also concerned with multiple-isotherm fitting to said kernel, and this methodology and the benefits thereof are explained in section \ref{ss:multi_iso}.\citep{Jagiello2015Dual}
 
-Measurements were taken at either 25 or 18 $\rm ^{\circ}C$ and up to 40 or 20 bar, on Xemis or IGA analysers respectively from Hiden Isochema. 
+\subsection{\texorpdfstring{Gravimetric \ce{CO2} uptake}{Gravimetric CO2 uptake}}
+The \ce{CO2} uptake of \gls{turbostratic carbon} samples was determined \textit{via} gravimetric analysis. This begins with the degassing of the samples under vacuum followed by precise measurement of the weight of the sample with increasing \ce{CO2} pressure. This yields a \ce{CO2} uptake isotherm, from which molar gravimetric uptake can be read as a function of pressure.
+
+Measurements were taken at either \num{25} or \qty{18}{\degreeCelsius} and up to \num{40} or \qty{20}{\bar}, on Xemis or IGA analysers respectively from Hiden Isochema. 
 
 \section{Computational}
+Chapter \ref{ch:pyPUC} describes the use of several python libraries in order to calculate linear regressions between porosity whithin some range of pore sizes to uptake of \ce{CO2} at some pressure. The methods are described in more detail in \ref{pub:pyPUC}, \textbf{section 2.1} as well as section \ref{s:pypuc_design}. The main libraries used in this project, known as the python Porosity Uptake Correlator (pyPUC) are \verb|scipy|,\citep{SciPy2020} \verb|numpy|,\citep{numpy2022} \verb|pandas|,\citep{pandas2010} and \verb|pygaps|.\citep{Iacomi2019pyGAPS}
 
 \bibliographystyle{rsc}
 \bibliography{bibliography/bib}
