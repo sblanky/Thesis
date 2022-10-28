@@ -54,12 +54,16 @@
 
 % Start of subappendices environment
 \AtBeginEnvironment{subappendices}{%
-    \newpage
-    \section*{Appendices}
+    \cleardoublepage
+    \appendixtocoff
+    \phantomsection
     \addcontentsline{toc}{section}{Appendices}
-\makeatother
-
+    \appendixpage
+    \makeatother
+    \appendixheaderon
     %\sectionmark{Appendices}
+    %\addappheadtotoc
+    
     \setcounter{figure}{0}
     \setcounter{table}{0}
     \renewcommand\thefigure{\thechapter.A\arabic{figure}}
