@@ -1,8 +1,35 @@
 \begin{appendices}
 \addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{Appendix }}
 
-\chapter{Composition}
+\newpage
+\setcounter{opagenum}{\thepage}
+\chapter[Publication III]{Publication III: Modulating the porosity of carbons for improved adsorption of hydrogen, carbon dioxide, and methane: a review}\label{ap:review}
 
+\textbf{Contribution of the author}: The author designed and performed the literature review and wrote the manuscript.
+
+\clearpage
+%\BackupCounterGroup[backup-id=pub1]{pagebackup}
+\newpage
+
+\setlength{\originalVOffset}{\voffset}   
+\setlength{\originalHOffset}{\hoffset}
+
+\setlength{\voffset}{0cm}
+\setlength{\hoffset}{0cm}
+% too big for overleaf, try compilation later.
+\includepdf[
+    pagecommand={
+    \setcounter{page}{\theopagenum}
+    \thispagestyle{empty}
+    },
+    pages=-]{1-introduction/publication_01.pdf}
+\setlength{\voffset}{\originalVOffset}
+\setlength{\hoffset}{\originalHOffset}
+
+\clearpage
+%\RestoreBackupCounterGroup[backup-id=pub1]{pagebackup}
+
+\chapter{Compositional Analyses}
 \newpage
 \begin{figure}[h]
     \centering

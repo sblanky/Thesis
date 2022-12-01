@@ -1,6 +1,7 @@
 \chapter{Introduction}
 \label{ch:introduction}
-\ref{pub:review} gives a detailed overview of many of the concepts and literature necessary to understand the experimentation and results described in later chapters - thus it makes up the bulk of this introductory chapter. In fact, sections discussing \acrfullpl{ztc} and \ce{H2} and \ce{CH4} storage are outside the scope of the practical parts of this work, but give some insight into the broader field of porous materials, adsorption, and small molecule capture/storage. Nonetheless there was some important detail which was not included in the publication, thus sections \ref{s:ccs} and \ref{s:adsorption_porosity} are included to discuss \ce{CO2} capture, and the general theories of adsorption and porosity, respectively.
+The following sections provide the essential background of the concepts and applications of the experimental and computational work contained within this thesis. While it is indeed sufficiently thorough, the author provides, for convenience, his review on the modulation of the porosity of carbons for uptake of various gases (\ref{pub:review}) as appendix \ref{ap:review}. This provides much broader information of the synthesis of porous carbons outside of just the \glspl{turbostratic carbon} which are examined in this work, and the measurement of porosity, as well as the relationship between porosity and uptake of different sorbents. 
+%\ref{pub:review} gives a detailed overview of many of the concepts and literature necessary to understand the experimentation and results described in later chapters - thus it makes up the bulk of this introductory chapter. In fact, sections discussing \acrfullpl{ztc} and \ce{H2} and \ce{CH4} storage are outside the scope of the practical parts of this work, but give some insight into the broader field of porous materials, adsorption, and small molecule capture/storage. Nonetheless there was some important detail which was not included in the publication, thus sections \ref{s:ccs} and \ref{s:adsorption_porosity} are included to discuss \ce{CO2} capture, and the general theories of adsorption and porosity, respectively.
 
 \newpage
 \section{\texorpdfstring{\ce{CO2} capture}{CO2 capture}}
@@ -55,34 +56,6 @@ The final characteristic of porous structures is porosity hierarchy. Materials l
 The various adsorption behaviours of a porous material discussed in the previous section result in distinct and interpretable forms of the resultant isotherms. As a general rule, the relative amount of gas adsorpted in different pressure ranges gives an indication of the amount of porosity in the internal \gls{micropore} and \gls{mesopore} regions as well as the amount of external surface area. To demonstrate, a labelled isotherm is shown in figure \ref{fig:isotherm_anatomy}. High adsorption in the low pressure region indicates the presence of \glspl{micropore}, while an increase in uptake at pressures around the midpoint of the isotherm indicate mesoporosity. If there is a plateau in the middle of the isotherm, this typically indicates that a monolayer has formed. The curvature of the isotherm prior to the plateau (the adsorption `knee') is indicative of the breadth of the \acrshort{psd}; a gentle knee shows a broad \acrshort{psd}, while a sharp knee indicates that pore sizes are narrowly distributed. Finally, high uptake as relative pressure approaches 1 are indicative of adsorption on the external surface, showing that the material is non-porous or macroporous.\citep{Thommes2015Physisorption} \acrshort{iupac} has designated eight distinct isotherm types.\citep{Thommes2015Physisorption, Sing1985} These need not be discussed in full detail here - it is sufficient to state that types I(a) and (b) isotherms are indicative of microporosity, while IV(a), IV(b) and V are seen on isotherms with high mesoporosity. Nonporous samples typically exhibit type II, III or VI isotherms. The variation in shapes can be indicative of surface chemistry and/or pore size hierarchy.\citep{thommes2014physical, monson2012understanding} Of course as a lot of materials exhibit multiple types of porosity, many materials exhibit characteristics of multiple isotherm types.\citep{Thommes2015Physisorption} 
 
 Apart from the general isotherm types, the presence of hysteresis - i.e. desorption releasing less \gls{adsorbate} than is taken up during adsorption at an identical relative pressure - is indicative of capillary condensation (see section \ref{ss:pore_filling}.\citep{thommes2014physical, monson2012understanding, landers2013density} As with characteristic isotherm types, \acrshort{iupac} has defined six distinct forms of hysteresis loop. Depending on the type of hyteresis loop, its presence may indicate adsorption metastability in an `open' pore, pore network effects and/or other forms of pore blocking.\citep{Thommes2015Physisorption} Each of the six hysteresis loops are associated with specific kinds of materials - for example H4 loops are frequently found in micro-mesoporous carbons, whereas H1 is typically associated with materials possessing uniform open mesopores.\citep{Thommes2015Physisorption, monson2012understanding}  
-
-\newpage
-\setcounter{opagenum}{\thepage}
-\section[Publication I]{Publication I: Modulating the porosity of carbons for improved adsorption of hydrogen, carbon dioxide, and methane: a review}
-
-\textbf{Contribution of the author}: The author designed and performed the literature review and wrote the manuscript.
-
-\clearpage
-%\BackupCounterGroup[backup-id=pub1]{pagebackup}
-\newpage
-
-\setlength{\originalVOffset}{\voffset}   
-\setlength{\originalHOffset}{\hoffset}
-
-\setlength{\voffset}{0cm}
-\setlength{\hoffset}{0cm}
-% too big for overleaf, try compilation later.
-\includepdf[
-    pagecommand={
-    \setcounter{page}{\theopagenum}
-    \thispagestyle{empty}
-    },
-    pages=-]{1-introduction/publication_01.pdf}
-\setlength{\voffset}{\originalVOffset}
-\setlength{\hoffset}{\originalHOffset}
-
-\clearpage
-%\RestoreBackupCounterGroup[backup-id=pub1]{pagebackup}
 
 \bibliographystyle{rsc}
 \bibliography{bibliography/bib}
