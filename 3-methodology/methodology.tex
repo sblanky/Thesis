@@ -15,7 +15,25 @@ In the context of porous carbon materials, activation is the process of porosity
 
 The relevance of each of these pore formation processes, as well as the synthetic procedures are described in the relevant chapters, however in all cases activation of the precusor-\gls{porogen} mixture was performed by placing the mixture into an alumina boat, and heating under a flow of dry \ce{N2} (\qty{60}{\cm\cubed\per\minute}) in a tube furnace. Dwell time was consistently \qty{1}{\hour} and ramp rate \qty{3}{\degreeCelsius\per\minute}.
 
-In chapter \ref{ch:cbs} activated carbons are produced
+In chapter \ref{ch:cbs} activated carbons were produced from \glspl{ucb} from a range of sources. Full synthetic details can be found in table \ref{tb:cb_synthesis}. In all cases, \qty{2.5}{\gram} \acrshortpl{ucb} were ground in a spice grinder, hydrothermally carbonised with \qty{25}{\cm\cubed} water at \qty{250}{\degreeCelsius} (\qty{5}{\degreeCelsius\per\minute}), held \qty{2}{\hour} then activated for \qty{1}{\hour} with or without \ce{KOH}. After cooling, all samples were washed with \ce{HCl} for at least \qty{24}{\hour}, then filtered and washed with water to give neutral washings. Sample designation is h\textit{A-xTTT}, where \textit{A} is the sample prefix (see table \ref{tb:cb_synthesis}), \textit{x} is KOH:\acrshort{ucb} ratio (wt./wt.), and \textit{TTT} is activation temperature in \unit{\degreeCelsius}. A portion of each self activated (i.e. $x = 0$) sample in sets C and D was left unwashed to determine the efficacy of the final washing step. These are indicated with $'$, for example hC-0800$'$ indicates a sample activated at \qty{800}{\degreeCelsius} in the absence of \gls{activating agent}, which was not washed. To refer to the \gls{hydrochar} itself, the designation is h\textit{A}-hydrochar, e.g. \gls{hydrochar} derived from subset hD (see table \ref{tb:cb_synthesis}) is hD-hydrochar.
+
+\begin{table}[t]
+    \caption{Synthetic details of samples derived from cigarette butts.}
+    \label{tb:cb_synthesis}
+    \begin{tabularx}{\textwidth}{lXXl}
+        \toprule
+            \textbf{Prefix} & \textbf{Preparation} & \textbf{T / \unit{\degreeCelsius}} & \textbf{\# Samples} \\ 
+        \midrule
+            \textbf{hC}     & From public ash tray; Ash, excess tobacco removed before grinding. \Gls{hydrochar} washed with \qty{0.5}{\dm\cubed} water.              & \numlist[list-final-separator={, }]{600;700;800} & 9              \\
+            \textbf{hD}     &  From public ash tray; Ash, excess tobacco removed before grinding.             & \numlist[list-final-separator={, }]{600;700;800} & 9             \\
+            \textbf{hE}     & Single brand from single smoker. Paper, ash, excess tobacco removed before grinding              & \numlist[list-final-separator={, }]{600;700;800} & 3              \\
+        \bottomrule
+    \end{tabularx}%
+\end{table}
+
+Sawdust-derived carbons were made in chapter \ref{ch:impregnation} by incorporating \ce{KOH} at weight ratios between \numlist{0.00;2.00} into the \gls{htc} step, drying the resultant slurry overnight at \qty{100}{\degreeCelsius} and then activating at \qty{800}{\degreeCelsius} as usual. \Gls{htc} occured at \qtylist[list-units=single]{200;250;300}{\degreeCelsius}. These sawdust-derived \glspl{hydrochar} are designated SA\textit{x.xx-HHH} where the prefix SA indicates activated sawdust, \textit{x.xx} is the KOH:sawdust ratio and \textit{HHH} is the \gls{htc} temperature. All samples were washed in the normal manner following activation. The hydrothermally carbonised intermediates were also isolated and washed - they are designated  SH\textit{x.xx-HHH} to differentiate them from the activated samples.
+
+Additionally, in chapter \ref{ch:impregnation} sodium carboxymethyl cellulose was used as a precursor for direct (without \gls{htc}) activation.  Samples are designated as NC\textit{x.x-TTT} where \acrshort{nc} indicates sodium carboxymethyl cellulose, \textit{x.x} is the \acrshort{ds}, and \textit{TTT} is the activation temperature. Values for \textit{x.x} were \numlist{0.0;0.7;0.9;1.2} and \textit{TTT} was \qtylist[list-units=single]{600;700;800}{\degreeCelsius}.
 
 \section{Analytical Techniques}
 Techniques in this section were employed to understand the composition, structure, and porosity of samples synthesised in this work. They are particularly relevant to chapters \ref{ch:cbs} and \ref{ch:impregnation}. The more precise compositional analysis techniques - \acrfull{xps} and \acrfull{icp-oes} - as well as electron microscopy were only used for samples produced from \acrfullpl{ucb} in chapter \ref{ch:cbs}. Chapters \ref{ch:dual_isotherm} and \ref{ch:pyPUC} rely primarily on analysis of data from porosimetry and gravimetric uptake techniques.
@@ -259,7 +277,7 @@ pyPUC is a fairly simple package whose structure is shown in figure \ref{fig:pyP
 
 The code is well documented, however a brief discussion of the purpose of each of the modules in \verb|pyPUC/pyPUC/core| follows here. Firstly \verb|utils.py| defines utility methods for the other three modules. Most important are the methods \verb|read_data()| and \verb|define_array()|. The former simply reads the data from the \verb|source_data| directory according to input arguments using the \verb|pandas| library,\citep{pandas2010} while the latter is a simple method for defining an array of pressures or pore widths for the modules \verb|uptake_processing| or \verb|psd_processing| using the \verb|numpy| library.\citep{numpy2022} 
 
-\begin{table}[t!]
+\begin{table}[b!]
 \centering
 \captionof{table}{An example output of processed data from the \texttt{uptake\_processing.py} (a) and \texttt{psd\_processing.py} modules (b). \textit{A}, \textit{B}, \textit{C}, and \textit{D} are the four samples used in this analysis. In the case of (a), the numbers are the loadings of \ce{CO2} on the samples at each of the pressures in column \textit{p}, and for (b) they are the surface areas of the samples within the pore size range defined by $w_{min}$ and $w_{max}$.}
     \begin{subtable}{.5\linewidth}
