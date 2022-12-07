@@ -159,55 +159,6 @@ Despite these problems, $A_{BET}$ continues to be the dominant measure of surfac
 		\item $Q_m$ as determined from (1) and (2) can be found in the region of the isotherm selected.\citep{Rouquerol2007Is} 
 	\end{enumerate}
 
-Classical models for pore structure rely on parameters including (but not limited to) the monolayer capacity of the \gls{adsorbent}, as well as the \gls{adsorbate}-\gls{adsorbent} interaction. Additionally, they make use of false assumptions such as that the \gls{adsorbate} behaves as a two-dimensional ideal gas (in the case of the Horvath-Kawazoe model). Conversely, Density Functional Theory (DFT) when applied to porosity makes use of statistical modelling of \gls{adsorbate}-\gls{adsorbate} and \gls{adsorbate}-\gls{adsorbent} interactions specific to a system defined by pore size, pore geometry, the adsorptive and temperature.
-
-The simplest system is described by a surface with single width, slit shaped pores under vacuum. This is then dosed with argon at a specified pressure. As this occurs argon atoms will begin to fill the pore, causing pressure in the bulk \gls{adsorbate} to decrease until an equilibrium is reached between the bulk argon and that adsorbed within the pore. According to the theory of dispersion interactions, the argon should be most concentrated at the surface at equilibrium – this concentration is the amount of gas adsorbed at the given pressure, i.e. one point on an isotherm. This amount can be calculated via by minimising the free energy of the system as given by the Lennard-Jones potential, $U(s)$;
-
-\begin{equation}
-U(s) = 4\varepsilon \left[ \left(\frac{\sigma}{s}\right)^{12} -  \left(\frac{\sigma}{s}\right)^{6} \right]
-\end{equation}
-
-Where $s$ is the distance between gas and surface, $\varepsilon$ is the energy of the \gls{adsorbate}; and $\sigma$ is the molecular diameter of the \gls{adsorbate}.  Thus, by varying the pressure from ultra-low to saturation, the amount of gas adsorbed at defined pressures can be calculated, and from this a model isotherm of this simple theoretical system can be built. 
-
-In practice, the equilibrium density profile is built up by minimising the grand potential energy of the system as a function of density, $\Omega[\rho(r)]$ - which is calculated for a point $r$ in the system as follows;
-
-\begin{equation}
-\Omega[\rho(r)] = F[\rho(r)] + \int \rho(r)\left(V(r) - \mu\right) \,\rm{d}r
-\end{equation}
-
-The latter term defines the gas properties via the ideal gas equations according to the potential acting on the molecule $V(r)$, while $F[\rho(r)]$ is the Helmholtz free energy of the gas at equilibrium density at point $r$. $F[\rho(r)]$ is defined composed of repulsive (hard sphere) and attractive interactions between gas molecules. This treatment results in the local density approximation, which assumes that a local part of an inhomegeneous system has the same free energy density as a bulk homogeneous system of the same density. The inaccuracy of this treatment has led to further development of the theory via non-localised methods (NLDFT),  \citep{tarazona1987phase, lastoskie1993pore, landers2013density} 
-as well as a corrugated pore model to account for energetic heterogeneity, as developed by Jagiello et al.\citep{Jagiello20132D}
-
-Regardless of the method, the computational generation of an isotherm is repeated across a range of pore widths to generate a library of isotherms for a specific \gls{adsorbate}-\gls{adsorbent} system known as the kernel, $N\left(\frac{P}{P_0}, \, W\right)$. The general \gls{adsorption} integral equation (equation \ref{eq:GAI}) is then used to correlate the experimental isotherm, $N\left(\frac{P}{P_0}\right)$  with the kernel, resulting in the pore size distribution as a function of pore width, $f(W)$.\citep{Thommes2015Physisorption}
-
-\begin{equation} \label{eq:GAI}
-    N\left(\frac{P}{P_0}\right) = \int_{w_{min}}^{w_{max}} N\left(\frac{P}{P_0}, \, w \right) f(W) \, \mathrm{d}w
-\end{equation}
-
-This data can be displayed in terms of differential or cumulative pore volume and surface area, and as such can be used to determine textural quantities previously calculated via classical methods.
-
-The earliest kernels for \gls{adsorption} of \ce{N2} on porous carbon used a one-dimensional, homogeneous, semi-infinte model of the pore wall surface.\citep{seaton1989new} That is, the pore wall is completely flat and its length extends to infinity. This simplified kernel determination as pore space was only characterised by the pore width, and used a local density approximation to account for repulsive forces; short-range interactions are omitted for simplicity. Unfortunately this results in a poor description of the density profile of \gls{adsorbate} molecules near the pore walls. Tarazona and co-workers improved on this model by considering these short-range interactions, producing the so-called \acrfull{nldft} kernel.\citep{tarazona1985free, tarazona1987phase} This nonetheless does not consider the energetic and chemical heterogeneity of pore walls within real porous carbons. Not only is this inaccurate, but the use of these kernels leads to poor fitting to the experimental isotherm and consistent artefacts in the resultant \acrshort{psd}.\citep{Jagiello20132D,  olivier1998improving, lueking2009tests, nguyen2004characterization} Olivier suggested improvements such as applying weightings to the model isotherms before fitting to the experimental data, as well as using a finite pore model.\citep{olivier1998improving} Nguyen and Bhatia found some improvements by taking the approach of considering pore wall heterogeneity by varying the pore wall thickness.\citep{nguyen2004characterization} Jagiello \textit{et al.}, however consider the pore wall to be a two-dimensional surface, having regular sinusoidal corrugations. This accounts for both chemical and energetic heterogeneity\citep{Jagiello20132D} and the eponymous 2D-NLDFT-HS (2-dimensional NLDFT heterogeneous surface) approach results in a better fit to the experimental isotherm.\citep{Jagiello20132D, puziy2016comparison, shi2021current} Thus far, the 2D-NLDFT-HS kernel has been developed for \ce{N2}, \ce{O2}, \ce{H2}, \ce{CO2}, and \ce{Ar}.\citep{Jagiello20132D, Jagiello2013, jagiello2019consistency, Jagiello2020Exploiting}
-
-The general \gls{adsorption} integral equation was shown in section equation \ref{eq:GAI}. For convenience, it is reproduced in equation \ref{eq:GAI_jagiello} in a form more useful to compare to calculations performed when fitting the \acrshort{dft} kernels to multiple isotherms simultaneously. $V(p_i)$ and $K(p_i,\,w)$ are the experimental isotherm and kernel respectively, and $f(w)$ is the differential \acrshort{psd} to be calculated.
-
-\begin{equation} \label{eq:GAI_jagiello}
-    V(p_i) = \int_{w_{min}}^{w_{max}} K(p_i,w) f(w) \, \mathrm{d}w
-\end{equation}
-
-The solution to this equation is quite involved, but is achievable using a method developed by Jagiello.\citep{Jagiello1994Stable} In short, a stable \acrshort{psd} can be determined by using the regularization approach to determine an appropriate fitting parameter, $\lambda$\citep{Hansen2001, Hansen1993use, Hansen2001L} and the discrete result is interpolated using the B-spline approach.\citep{knott2000interpolating, prautzsch2002bezier, deboor1978practical} This method is automated in the SAIEUS (Solution to the Adsorption Integral Equation Using Splines) program.\citep{Jagiello1994Stable} The $\lambda$ variable is added to the expression in equation \ref{eq:GAI_jagiello} to produce \ref{eq:GAI_jagiello_lambda};
-
-\begin{equation} \label{eq:GAI_jagiello_lambda}
-    V(p_i) = \int_{w_{min}}^{w_{max}} K(p_i,w) f(w) \, \mathrm{d}w + \lambda\int_{w_{min}}^{w_{max}}\left[ f''(w) \right]^2\, \mathrm{d}w
-\end{equation}
-
-When considering $M$ multiple isotherms, a summative approach is needed.\citep{caguiat2014uncertainties} Minimisation of the multi-isotherm, multi-kernel  expression in equation \ref{eq:multiple_isotherm} for each \gls{adsorbate}, $m$ will yield a single \acrshort{psd} for all $M$ isotherms.\footnote{The summative expression in equation \ref{eq:multiple_isotherm} is a result of the solution to the single isotherm general \gls{adsorption} integral equation described in equation \ref{eq:GAI_jagiello_lambda}. Its derivation is discussed by Jagiello in the original paper,\citep{Jagiello1994Stable} but is outside the scope of this work.}
-
-\begin{equation} \label{eq:multiple_isotherm}
-    \mathrm{min}\sum_{m}^{M}\sum_{i}^{N_m}\left[ V_m(p_i) - \int_{w_{min}}^{w_{max}}K_m(p_i,\,w)f(w)\,\mathrm{d}w\right]^2 + \lambda\int_{w_{min}}^{w_{max}}\left[ f''(w) \right]^2\, \mathrm{d}w
-\end{equation}
-
-Where $V_m(p_i)$ and $K_m(p_i,\,w)$ are the $m$th experimental isotherm and $m$th kernel respectively.\citep{Jagiello2015Dual, Jagiello2008Characterization, Jagiello2007}
-
 \paragraph{In this work} All isotherms were measured on a 3flex analyser (Micromeritics). $A_{BET}$ and total pore volume ($V_t$) were determined using the Rouquerol method (where appropriate), and the single point method respectively. Classical determination of \gls{micropore} volume and surface area were determined using t-plot, with a carbon black STSA thickness curve. All \acrshortpl{psd} are derived using the 2D-NLDFT heterogeneous surface kernel.\citep{Jagiello20132D}.
 
 \subsection{\texorpdfstring{Gravimetric \ce{CO2} uptake}{Gravimetric CO2 uptake}}
