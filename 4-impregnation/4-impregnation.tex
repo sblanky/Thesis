@@ -18,12 +18,12 @@ Eleven SH\textit{x.xx-HHH} samples were produced from the sawdust precursor. In 
 
 CHN elemental microanalysis was used to determine the composition of sawdust precursor and derived carbons; results are show in table \ref{tb:sa_chn}. \acrshort{tga} shows that all samples are fully carbonaceous, i.e. there are no residual \ce{K} compounds present after washing - see appendix, figure \ref{fig:SD_tga}. Thus, in the CHN analysis, the remainder of the sum of \ce{C}, \ce{H} and \ce{N} gravimetric concentrations is assumed to be made up by \ce{O} in table \ref{tb:sa_chn}. In addition, for all carbons there is a single burn-off event at \qty{600}{\degreeCelsius}, as reported previously both for carbons prepared directly from sawdust or from sawdust-derived \gls{hydrochar}.\citep{Balahmar2017Biomass} Therefore, the thermal stability of carbons derived from sawdust does not seem to be significantly affected by the quantity (or even presence) of \ce{KOH} as a \gls{porogen}, the method of preparing the precursor, or the method of introducing \ce{KOH} to the precursor.
 
-\begin{table}[b!]
+\begin{table}[ht!]
     \caption{Composition of SA\textit{x.xx-TTT} carbons according to elemental microanalysis. \ce{O} content is the remaining \unit{\wtpercent} after consideration of the \ce{C}, \ce{H}, and \ce{N}.}
     \label{tb:sa_chn}
     \begin{tabularx}{\textwidth}{lXXXXXX}
     \toprule
-        \textbf{Sample} & \multicolumn{4}{c}{\textbf{Concentration / \unit{\wtpercent}}} & \multicolumn{2}{c}{\textbf{Atomic ratio}} \\
+        \textbf{Sample} & \multicolumn{4}{c}{\textbf{Concentration / \unit[detect-weight]{\wtpercent}}} & \multicolumn{2}{c}{\textbf{Atomic ratio}} \\
         & \textbf{C} & \textbf{H} & \textbf{N} & \textbf{O} & \textbf{O/C} & \textbf{H/C} \\
     \midrule
         \textbf{\acrshort{sd}} & 45 & 6 & 1 & 48 & 0.80 & 1.62 \\
@@ -51,7 +51,7 @@ The elemental composition of the sawdust is similar to that previously reported 
 
 It was initially attempted to produce porous carbons \textit{via} \gls{htc} with a \ce{KOH} solution, i.e. without \gls{pyrolysis}. Unsurprisingly this proved ineffective as \gls{activation} typically requires temperatures in excess of \qty{400}{\degreeCelsius}.\citep{Sevilla2014Energy, Blankenship2022Modulating} $A_{BET}$ of these samples (i.e. SH\textit{x.xx-HHH}) was not in excess of \qty{10}{\metre\squared\per\gram}. As for the pyrolised samples, porosity was reasonable, with $A_{BET}$ of least \qty{300}{\metre\squared\per\gram} for samples synthesised without \ce{KOH}, and above \qty{990}{\metre\squared\per\gram} for the \ce{KOH}-activated samples. Full textural characteristics are shown in table \ref{tb:sa_porosity}, as well as the isotherms from which they are derived and \acrshortpl{psd} in figure \ref{fig:SA_n2_isotherms}.\footnote{Individual \glspl{psd} and the kernel fits they are derived from can be found in the appendix, figures \ref{fig:SAxxx-200_isopsd}-\ref{fig:SAxxx-300_isopsd}.} 
 
-\begin{table}[b!]
+\begin{table}[t!]
     \centering
     \caption{Porosity of SA\textit{x.xx-TTT} carbons. $A_{BET}$ derived using the Rouquerol method, the total pore volume, $V_t$ is taken using the single point method. Values in brackets indicate the microporous portion of $A_{BET}$ and $V_t$, calculated using t-plot. Peak pore width, $w_{peak}$ is the maximum of the \acrshort{psd} determined using \acrshort{nldft}, as shown in figure \ref{fig:SA_n2_isotherms}.}
     \label{tb:sa_porosity}
@@ -92,23 +92,29 @@ The additional KOH:\acrshort{sd} ratio of 0.25 and 2.00 were included at \gls{ht
 
 In their 2017 work Balahmar \textit{et al.} report carbons which were synthesised by activation with \ce{KOH} at \qty{800}{\degreeCelsius} either of untreated sawdust or sawdust-derived \gls{hydrochar} synthesised at \qty{250}{\degreeCelsius}.\citep{Balahmar2017Biomass} Figure \ref{fig:SA_porosity_compare} compares these results. $A_{BET}$ is compared in terms of both \ce{KOH}:precursor mass ratio, and atomic \ce{K}:\ce{C} ratio; the latter according to the elemental composition of the precursor (sawdust or \gls{hydrochar}). The three methods, i.e. direct activation of sawdust, activation of \gls{hydrochar}, and hydrothermal impregnation of \ce{KOH} into sawdust do not seem to show any significant difference in terms of the overall $A_{BET}$ of the final product. Indeed, there is a clear strong linear correlation  between amount of \ce{KOH} used and $A_{BET}$; $r^2=0.90$, regardless of whether mass of \ce{KOH} or amount of \ce{K} is considered. The slopes of the linear regressions on figure \ref{fig:SA_porosity_compare}(a1, a2) are \qtylist[list-units=single]{523;386}{\metre\squared\per\gram}, respectively. Thus, increases in $A_{BET}$ with increasing amount of \ce{KOH} can be precisely predicted. Furthermore, the temperature used in the hydrothermal impregnation step (this work) does not significantly effect $A_{BET}$ of the final product. However, the microporosity of the product is significantly effected by synthetic method. At a \ce{KOH}:precursor mass ratio of 2.00, microporosity is maximised by direct activation of sawdust at \qty{84}{\percent}, which decreases to \qty{63}{\percent} for activation of sawdust-derived \gls{hydrochar}, and finally to \qty{27}{\percent} for the hydrothermal impregnation method. These results are also reflected by the very broad, principally mesoporous \gls{psd} of SA2.00-250 relative to the comparable samples reported in the paper by Balahmar and co-workers.\citep{Balahmar2017Biomass} 
 
-\begin{figure}[t!]
-    \centering
-    \includegraphics[width=\columnwidth, keepaspectratio]{4-impregnation/figs/SD_porosity_compare.png}
-    \caption{Relationship between amount of \ce{KOH} used in activation of sawdust and porosity. Samples synthesised by Balahmar \textit{et al.} included to show effect of different methods of preparation.\citep{Balahmar2017Biomass} Amount of \ce{KOH} shown as KOH:precursor mass ratio (column 1), and as \ce{K}:\ce{C} atomic ratio (column 2). Porosity shown in terms of total $A_{BET}$ (row a) and micropore surface area calculated using t-plot (row b).}
+\begin{landscape}
+%\newpage
+%\begin{rotate}{90}
+\begin{SCfigure}%[hptb]
+    \includegraphics[width=0.55\paperheight, keepaspectratio]{4-impregnation/figs/SD_porosity_compare.png}
+    \caption{\protect\rule{0ex}{5ex} Relationship between amount of \ce{KOH} used in activation of sawdust and porosity. Samples synthesised by Balahmar \textit{et al.} included to show effect of different methods of preparation.\citep{Balahmar2017Biomass} Amount of \ce{KOH} shown as KOH:precursor mass ratio (column 1), and as \ce{K}:\ce{C} atomic ratio (column 2). Porosity shown in terms of total $A_{BET}$ (row a) and micropore surface area calculated using t-plot (row b).}
     \label{fig:SA_porosity_compare}
-\end{figure}
+\end{SCfigure}
+%\end{rotate}
+%\clearpage
+
+\end{landscape}
 
 \paragraph{Density}
 
-\begin{figure}[ht!]
+\begin{figure}[b!]
     \centering
     \includegraphics[width=\columnwidth, keepaspectratio]{4-impregnation/figs/SD_density.png}
     \caption{Effect of \ce{KOH}:\acrshort{sd} ratio on bulk density, $\rho_b$ of carbons synthesised using the three \ce{htc} temperatures. $\rho_b$ estimated from freespace measurements.}
     \label{fig:SA_density}
 \end{figure}
 
-As mentioned in subsection \ref{ss:sd_results}, sample SA2.00-250 was noticeably more diffuse than the other samples. In lieu of access to appropriate pycnometric equipment, bulk density ($\rho_{b}$) of samples found here was estimated by using ambient temperature \ce{He} freespace measurements during the measurement of \ce{N2} isotherms. The sample volume was taken as the difference between this freespace and the ambient freespace of the empty tube, thus calculation of the $\rho_{b}$ was trivial as sample mass is already known. These estimated bulk densities are shown in figure \ref{fig:SA_density}. Densities of these carbons are at the low end of that  reported for \ce{KOH}-activated carbons,\citep{casco2015very, machnikowski2012adsorption, Altwala2020Predictable} however similar values have been reported by some groups.\citep{tseng2008effects, rashid2016koh, Guan2011Methane} Additionally, for \ce{KOH} activated samples, $\rho_b$ is negatively correlated with amount of \ce{KOH} used during activation, similarly to reports by Tseng \textit{et al.}.\citep{tseng2008effects} The extremely low bulk density (\qty{0.031}{\gram\per\cm\cubed}) of SA2.00-250 may be ascribed to an effect described by Deng and co-workers in 2015, i.e. that high production of gases by the activating agent results in bulk densities as low as \qty{0.043}{\gram\per\cm\cubed} and hierarchical \glspl{psd}.\citep{Deng2015Inspired} While the gas production in the work by Deng \textit{et al.} is thought to be a result of decomposition of the \ce{KHCO3} \gls{porogen}, in this study reactions of excess aqueous \ce{KOH} with the precursor during the hydrothermal impregnation step may form \glspl{porogen} that have a similar capacity to release gases such as \ce{CO2}. This does not however serve to explain the low densities of the remaining samples which are almost exclusively microporous. 
+As mentioned in section \ref{ss:sd_results}, sample SA2.00-250 was noticeably more diffuse than the other samples. In lieu of access to appropriate pycnometric equipment, bulk density ($\rho_{b}$) of samples found here was estimated by using ambient temperature \ce{He} freespace measurements used to calibrate the measurement of \ce{N2} isotherms. The sample volume was taken as the difference between this freespace and the ambient freespace of the empty tube, thus calculation of the $\rho_{b}$ was trivial as sample mass is already known. These estimated bulk densities are shown in figure \ref{fig:SA_density}. Densities of these carbons are at the low end of that  reported for \ce{KOH}-activated carbons,\citep{casco2015very, machnikowski2012adsorption, Altwala2020Predictable} however similar values have been reported by some groups.\citep{tseng2008effects, rashid2016koh, Guan2011Methane} Additionally, for \ce{KOH} activated samples, $\rho_b$ is negatively correlated with amount of \ce{KOH} used during activation, similarly to reports by Tseng \textit{et al.}.\citep{tseng2008effects} The extremely low bulk density (\qty{0.031}{\gram\per\cm\cubed}) of SA2.00-250 may be ascribed to an effect described by Deng and co-workers in 2015, i.e. that high production of gases by the activating agent results in bulk densities as low as \qty{0.043}{\gram\per\cm\cubed} and hierarchical \glspl{psd}.\citep{Deng2015Inspired} While the gas production in the work by Deng \textit{et al.} is thought to be a result of decomposition of the \ce{KHCO3} \gls{porogen}, in this study reactions of excess aqueous \ce{KOH} with the precursor during the hydrothermal impregnation step may form \glspl{porogen} that have a similar capacity to release gases such as \ce{CO2}. This does not however serve to explain the low densities of the remaining samples which are almost exclusively microporous. 
 
 \newpage
 \section{Sodium Carboxymethyl Cellulose}
@@ -134,7 +140,7 @@ Twelve carbon samples were produced from sodium carboxymethyl cellulose with var
     \label{tb:nc_chn}
     \begin{tabularx}{0.9\textwidth}{lXXXXXXX}
     \toprule
-        \textbf{Sample} & \multicolumn{4}{c}{\textbf{Concentration / \unit{\wtpercent}}} & \multicolumn{3}{c}{\textbf{Atomic ratio}} \\
+        \textbf{Sample} & \multicolumn{4}{c}{\textbf{Concentration / \unit[detect-weight]{\wtpercent}}} & \multicolumn{3}{c}{\textbf{Atomic ratio}} \\
         & \textbf{C} & \textbf{H} & \textbf{O} & \textbf{Na} & \textbf{O/C} & \textbf{H/C} & \textbf{Na/C} \\
     \midrule
         \textbf{NC0.0} & 44 & 6.2 & 49 & 0 & 0.83 & 0.14 & - \\

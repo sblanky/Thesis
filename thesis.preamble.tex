@@ -29,9 +29,9 @@
 %\usepackage[sfdefault]{roboto}
 \usepackage[LGR,T1]{fontenc}
 %Per chapter appendix setup
-\usepackage{appendix}
-\usepackage{chngcntr}
-\usepackage{etoolbox}
+%\usepackage{appendix}
+%\usepackage{chngcntr}
+%\usepackage{etoolbox}
 
 %directory tree
 \usepackage{forest}
@@ -163,6 +163,7 @@ breaklines=true,
 \AtBeginDocument{\addtolength\cftchapnumwidth{\widthof{Chapter}}}
 
 % for table of contents to show Appendix
+%\begin{comment}
 \renewcommand{\cftchappresnum}{\chaptername\space}
 \setlength{\cftchapnumwidth}{\widthof{Appendix}}
 \makeatletter
@@ -171,6 +172,7 @@ breaklines=true,
     \protect\renewcommand{\protect\cftchappresnum}{\appendixname\space}
   }%
 }
+%\end{comment}
 
 % mini table of content
 \usepackage{minitoc}
@@ -341,3 +343,8 @@ breaklines=true,
 %for changing offsets when pdfs inserted
 \newlength{\originalVOffset}
 \newlength{\originalHOffset}
+
+\usepackage{pdflscape}
+%\usepackage{rotating}
+\usepackage{sidecap}
+\sidecaptionvpos{figure}{t}
