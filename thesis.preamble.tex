@@ -20,6 +20,8 @@
 % \usepackage[colorlinks=true]{hyperref}
 \usepackage{cprotect}
 
+\usepackage{afterpage}
+
 \usepackage[]{inputenc}
 \newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
 \usepackage[english]{babel}
@@ -202,6 +204,7 @@ breaklines=true,
   \fancyhead[C]{\slshape \rightmark}
   \fancyfoot[C]{\thepage}
   \renewcommand\headrulewidth{.4pt}
+  \setlength{\headheight}{14.49998pt}
 }
 \makeatletter
   \newcommand\frontpagestyle{\cleardoublepage\pagestyle{front}\let\ps@plain\ps@front}
